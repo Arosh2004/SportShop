@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="news.css">
+    <title>Sports Section</title>
+</head>
+<body>
+
+    <div class="sports-container">
+        <div id="football" class="sport-tab" onclick="showFootballPage()">
+           <a href="football.html"> <img src="football news.jpg" alt="Football Image"></a>
+            <h2>Football</h2>
+            <p id="football-content">Loading football news...</p>
+        </div>
+        
+        <div id="cricket" class="sport-tab" onclick="showCricketPage()">
+           <a href="cricket.html"><img src="cricket news.jpg" alt="Cricket Image"></a>
+            <h2>Cricket</h2>
+            <p id="cricket-content">Loading cricket news...</p>
+        </div>
+        
+        <div id="basketball" class="sport-tab" onclick="showBasketballPage()">
+            <a href="basketball.html"></a><img src="basketball news .jpg" alt="Basketball Image">
+            <h2>Basketball</h2>
+            <p id="basketball-content">Loading basketball news...</p>
+        </div>
+    </div>
+
+    <div id="football-page" class="hidden">
+        <h2>Football News Page</h2>
+        <p id="football-news">Loading football news...</p>
+    </div>
+
+    <div id="cricket-page" class="hidden">
+        <h2>cricket News Page</h2>
+        <p id="cricket-news">Loading cricket news...</p>
+    </div>
+
+    <div id="basketball-page" class="hidden">
+        <h2>basketball News Page</h2>
+        <p id="basketball">Loading basketball news...</p>
+    </div>
+    <css cs ="css.css"></css>
+
+    <script src="news.js"></script>
+</body>
+</html>

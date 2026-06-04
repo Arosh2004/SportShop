@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<Html>  
+    <head>   
+    <title>  
+    Registration Page  
+    </title>  
+    <link rel="stylesheet" href="emp.css">
+    <script lang="javascript" type="text/javascript">
+        function validateForm(){
+            let x = document.forms["myform"]["fname"].value;
+            let name = /^[aA-zZ]+$/;
+            let mobile = document.forms["myform"]["phone"].value;
+            let phone = /^[0-9]+$/;
+            let sal = document.forms["myform"]["salary"].value;
+
+            if (!x.match(name)){
+                alert("Enter valid name");
+                return false;
+            }
+            if (mobile.length != 10 || !mobile.match(phone)){
+                alert("Enter 10 digit valid mobile no");
+                return false;
+            }
+            if (sal < 10000 || sal > 100000){
+                alert("Enter valid salary in range(10000 to 100000");
+                return false;
+            }else{
+                return true;
+            }
+        }
+        
+
+    </script>
+    </head> 
+   
+    <body>
+        <form class="myform" name="myform" action="feedback.html" onsubmit="return validateForm()" method="post">
+          <br>
+          <h1>EMPLOYEE </h1>
+          <h2>Registration Form</h2>  
+    <br>
+    <br>  
+    <br>
+    <label> Name </label>         
+    <input type="text" name="fname" size="15" required/> <br> <br>  
+    <br>  
+    <br> 
+   
+     Email:
+    <input type="email" name="Email" required/>   
+    <label>   
+    Phone :  
+    </label>  
+    <input type="text" name="country code"  value="+91" size="2"/>   
+    <input type="text" name="phone" size="10" required/> <br> <br>  
+    Address :  
+    <br>  
+    <textarea cols="80" rows="5" value="address" required>  
+    </textarea>  
+    <br> <br>
+     Salary:
+    <input type="text" name="salary" required />   
+   <br> <br>
+    <input type="submit" value="Submit"/>  
+    <input type="reset" value="reset"/> 
+</form>
+</body>  
+    </html>
